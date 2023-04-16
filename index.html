@@ -13,31 +13,78 @@
       body {
         background-color: #262626;
       }
+      .top {
+        position: -webkit-sticky;
+        position: sticky;
+        /* border: 1px solid rgb(0, 0, 0); */
+      }
       h1 {
         position: absolute;
         /* top: 40%; */
         left: 40%;
 
-        font-size: 40px;
+        font-size: 5rem;
         font-family: Arial, Helvetica, sans-serif;
         background: linear-gradient(to right, red, blue);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
       }
+      .header {
+        padding: 1rem;
+        font-size: 3rem;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        background-color: rgb(166, 66, 50);
+
+        /* border: 2px solid red; */
+      }
+      .content {
+        padding: 1rem;
+        font-size: 2rem;
+        color: blue;
+        background-color: #e9e5e5;
+        /* border: 2px solid yellow; */
+      }
+      .container {
+        margin-top: 10rem;
+        width: 70rem;
+      }
+      .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
     <title>FAQ</title>
   </head>
   <body>
-    <h1>FAQ'S</h1>
-    <div class="container">
-      <div class="header">This is header One</div>
-      <div class="content">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
-        maiores dolore numquam, assumenda doloremque repudiandae dolorum dolor
-        provident officia optio.
+    <div class="top">
+      <h1>FAQ'S</h1>
+    </div>
+    <!-- main content -->
+    <div class="parent">
+      <div class="container">
+        <div class="header">This is header One</div>
+        <div class="content">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+          maiores dolore numquam, assumenda doloremque repudiandae dolorum dolor
+          provident officia optio.
+        </div>
       </div>
     </div>
+    <!-- end of main content  -->
     <!-- javascript code are Here! -->
-    <script></script>
+    <script>
+      const parent = document.querySelector(".parent");
+      const header = document.querySelector(".header");
+      const content = document.querySelector(".content");
+      content.style.display = "none";
+
+      parent.addEventListener("click", () => {
+        content.style.display === "none"?content.style.display = "block":content.style.display = "none";
+      }
+
+      );
+    </script>
   </body>
 </html>
