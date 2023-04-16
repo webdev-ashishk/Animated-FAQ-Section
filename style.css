@@ -61,7 +61,7 @@ h1 {
 /*/////////////////// media query///////////////////// */
 
 /* all mobile device */
-@media (max-width: 42em) {
+@media (max-width: 43em) {
   h1 {
     position: absolute;
     /* top: 40%; */
