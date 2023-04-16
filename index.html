@@ -35,7 +35,7 @@
         color: rgb(255, 255, 255);
         font-weight: 600;
         background-color: rgb(166, 66, 50);
-
+        border-radius: 0.5rem;
         /* border: 2px solid red; */
       }
       .content {
@@ -81,10 +81,10 @@
       content.style.display = "none";
 
       parent.addEventListener("click", () => {
-        content.style.display === "none"?content.style.display = "block":content.style.display = "none";
-      }
-
-      );
+        content.style.display === "none"
+          ? (content.style.display = "block")
+          : (content.style.display = "none");
+      });
     </script>
   </body>
 </html>
